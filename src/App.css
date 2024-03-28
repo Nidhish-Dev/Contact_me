@@ -1,72 +1,122 @@
-/* Apply basic styles to the form container */
-div {
-  text-align: center;
-  padding: 20px;
-  max-width: 500px;
-  margin: 0 auto;
+/* App.css */
+body {
+  background-color: #001E2B;
+  overflow: hidden;
+  font-family: "Syne", sans-serif;
 }
 
-/* Style the form heading */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  color: #00ED64;
 }
 
-/* Style the form inputs and text area */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
+.container {
+  width: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input {
   width: 100%;
+  font-family: "Poppins", sans-serif;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-/* Style the form button */
-button[type="submit"] {
-  background-color: #007bff;
-  color: white;
+  background-color: rgba(255, 255, 255, 0);
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-/* Style the success and error messages */
-p {
+  border-bottom: solid 1px #00ED64;
+  outline: none;
+  color: white;
   font-size: 16px;
-  margin-top: 10px;
+  box-sizing: border-box;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
+::placeholder {
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 200;
+}
 
-  /* Adjust form width for smaller screens */
-  div {
-    max-width: 90%;
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #00ED64;
+  color: #000000;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Added transition */
+}
+
+button[type="submit"]:hover {
+  background-color: #00c552;
+  /* Changed hover color */
+}
+
+.getintouch {
+  color: rgba(255, 255, 255, 0.178);
+  margin-bottom: 20px;
+  margin-right: 20px;
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+}
+
+.success {
+  margin-top: 15px;
+  padding: 5px;
+  padding-left: 10px;
+  font-size: 12px;
+  background-color: #001E2B;
+  color: #00c552;
+  border: none;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    width: 80%;
   }
 
-  /* Increase font size for smaller screens */
-  h1 {
-    font-size: 20px;
+  .main {
+    flex-direction: column;
+    /* Change flex direction for smaller screens */
+
+    /* Align items to the start for smaller screens */
   }
 
-  /* Reduce padding and font size for form inputs */
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    padding: 8px;
-    font-size: 14px;
-  }
+  .getintouch {
+    margin-bottom: 10px;
 
-  /* Adjust button padding and font size */
-  button[type="submit"] {
-    padding: 8px 16px;
-    font-size: 16px;
+    font-size: 30px;
+    /* Remove right margin */
   }
+}
+
+.codeimg {
+  margin-right: 10px;
 }

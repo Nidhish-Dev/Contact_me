@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { db, collection, addDoc } from './firebase';
-
+import './App.css'
 function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -43,10 +43,15 @@ function ContactForm() {
   };
 
   return (
-    <div>
-      <h1>Contact me</h1>
-      <form onSubmit={handleSubmit}>
+    <>
+    <div className="App">
+      <div className='main'>
+
+      
+      <p className="getintouch">GET IN TOUCH</p>
+      <form className="container" onSubmit={handleSubmit}>
         <input
+        className="name"
           type="text"
           placeholder="Name"
           value={name}
@@ -55,6 +60,7 @@ function ContactForm() {
         />
         <input
           type="email"
+          className="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -62,24 +68,31 @@ function ContactForm() {
         />
         <input
           type="tel"
+          className="mobile"
           placeholder="Mobile Number"
           value={mobile}
           onChange={(e) => setMobile(e.target.value)}
           required
         />
-        <textarea
+        <input
+        className="msg"
           placeholder="Message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
-        ></textarea>
-        <button type="submit">Submit</button>
+        ></input>
+        <button type="submit">Send        <lord-icon
+                src="https://cdn.lordicon.com/eodeknny.json"
+                trigger="hover"
+              ></lord-icon></button>
       </form>
 
       {/* Display success or error message */}
       {submitStatus === 'Success' && <p>Message sent successfully!</p>}
       {submitStatus === 'Error' && <p>Message sending failed. Please try again later.</p>}
+      </div>
     </div>
+    </>
   );
 }
 
