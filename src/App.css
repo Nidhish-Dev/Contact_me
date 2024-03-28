@@ -108,7 +108,12 @@ button[type="submit"]:hover {
 
     /* Align items to the start for smaller screens */
   }
-
+input {
+  border-radius: 0;
+  /* Reset border radius for smaller screens */
+  border-bottom: solid 1px #00ED64;
+  /* Ensure consistent border style */
+}
   .getintouch {
     margin-bottom: 10px;
 
