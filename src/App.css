@@ -20,6 +20,7 @@ h1 {
 .container {
   width: 400px;
   padding: 20px;
+  
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   border-radius: 8px;
@@ -77,11 +78,12 @@ button[type="submit"]:hover {
   margin-right: 20px;
   font-family: "Syne", sans-serif;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .main {
-  display: flex;
+justify-content: center;
+text-align: center;
   align-items: center;
 }
 
